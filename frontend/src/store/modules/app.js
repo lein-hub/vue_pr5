@@ -25,11 +25,15 @@ const getters = {
 }
 
 const mutations = {
-
+  setDrawer (state, data) {
+    state.drawer = data
+  }
 }
 
 const actions = {
-
+  toggleDrawer ({commit}, value) {
+    commit('setDrawer', value)
+  }
 }
 
 export default {

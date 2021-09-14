@@ -4,6 +4,14 @@
     color="primary"
     dark
   >
+    <div>
+      <v-img
+        class="shrink"
+        :src="require('../../assets/logo.png')"
+        width="40"
+      />
+    </div>
+    <v-spacer />
     <v-app-bar-nav-icon
       @click="drawer = !drawer"
     />
@@ -18,7 +26,7 @@ export default {
         return this.$store.getters['app/getDrawer']
       },
       set(value) {
-        return this.$store,dispatch('app/toggleDrawer', value)
+        return this.$store.dispatch('app/toggleDrawer', value)
       }
     }
   }

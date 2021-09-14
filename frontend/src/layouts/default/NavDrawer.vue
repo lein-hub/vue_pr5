@@ -1,22 +1,26 @@
 <template>
-  <v-navigation-drawer
-    permanent
-  >
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="text-h6">
-          Application
-        </v-list-item-title>
-        <v-list-item-subtitle>
-          subtext
-        </v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
-    <!-- <default-drawer-header /> -->
+  <v-expand-transition>
+    <v-card
+      v-show="drawer"
+      v-bind="$attrs"
+      width="auto"
+      height="100%"
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <!-- <default-drawer-header /> -->
 
-    <v-divider />
+      <v-divider />
 
-    <v-list
+      <!-- <v-list
       dense
       nav
     >
@@ -25,18 +29,15 @@
         :key="item.title"
         link
       >
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-
         <v-list-item-content>
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-    </v-list>
+    </v-list> -->
 
-    <!-- <default-drawer-list :items="items" /> -->
-  </v-navigation-drawer>
+      <default-drawer-list :items="items" />
+    </v-card>
+  </v-expand-transition>
 </template>
 
 <script>
@@ -46,7 +47,7 @@ export default {
   name: 'DefaultDrawer',
   components: {
     // DefaultDrawerHeader: () => System.import(/* webpackChunkName: "views-default" */'./NavHeader.vue'),
-    // DefaultDrawerList: () => System.import(/* webpackChunkName: "views-default" */'./NavList.vue'),
+    DefaultDrawerList: () => System.import(/* webpackChunkName: "views-default" */'./NavList.vue'),
   },
   data() {
     return {
