@@ -15,7 +15,7 @@ const state = {
       {title: 'Comic', to:'/comic'},
     ]},
     {title: 'Goods', to:'/goods'},
-    {title: 'Guideline', to:'/guideline'},
+    {title: 'Guidelines', to:'/guidelines'},
   ],
   drawer: true,
 }

@@ -1,0 +1,11 @@
+<template>
+  <div>
+    Music
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
