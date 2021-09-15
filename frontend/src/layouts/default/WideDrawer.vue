@@ -36,7 +36,7 @@
       </v-list-item>
     </v-list> -->
 
-      <default-drawer-list :items="items" />
+      <wide-drawer-list :items="items" />
     </v-card>
   </v-expand-transition>
 </template>
@@ -45,10 +45,10 @@
 import {mapState} from 'vuex'
 
 export default {
-  name: 'DefaultDrawer',
+  name: 'WideDrawer',
   components: {
     // DefaultDrawerHeader: () => System.import(/* webpackChunkName: "views-default" */'./NavHeader.vue'),
-    DefaultDrawerList: () => System.import(/* webpackChunkName: "views-default" */'./NavList.vue'),
+    WideDrawerList: () => System.import(/* webpackChunkName: "views-default" */'./WideList.vue'),
   },
   data() {
     return {

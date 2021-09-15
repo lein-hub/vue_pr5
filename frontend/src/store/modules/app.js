@@ -17,7 +17,7 @@ const state = {
     {title: 'Goods', to:'/goods'},
     {title: 'Guidelines', to:'/guidelines'},
   ],
-  drawer: true,
+  drawer: false,
 }
 
 const getters = {
